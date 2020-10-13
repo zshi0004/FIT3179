@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Vic Map",
+  "width": 800,
+  "height": 600,
+  "projection": {
+    "type": "equirectangular"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/TopoJson%20vic.json",
+    "format": {
+      "type": "topojson",
+      "feature": "geoJason vic"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.vic_loca_2",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/MELBOURNE_HOUSE_PRICES_test.csv"
+        },
+        "key": "Suburb",
+        "fields": [
+          "Price"
+        ]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape"
+  },
+  "encoding": {
+    "color": {
+      "field": "Price",
+      "type": "quantitative",
+      "scale": {
+        "type": "log"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.vic_loca_2",
+        "type": "nominal",
+        "title": "Suburb"
+      },
+      {
+        "field": "Price",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}
