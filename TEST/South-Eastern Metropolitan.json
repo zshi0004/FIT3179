@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Housing Market in South-Eastern Metropolitan of Melbourne",
+  "width": 800,
+  "height": 600,
+  "projection": {
+    "type": "equirectangular"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/TopoJson%20vic.json",
+    "format": {
+      "type": "topojson",
+      "feature": "geoJason vic"
+    }
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "properties.vic_loca_2",
+        "oneOf": [
+          "ASPENDALE",
+          "ASPENDALE GARDENS",
+          "BONBEACH",
+          "BOTANIC RIDGE",
+          "CARRUM",
+          "CARRUM DOWNS",
+          "CHELSEA",
+          "CHELSEA HEIGHTS",
+          "CLARINDA",
+          "CLAYTON",
+          "CLAYTON SOUTH",
+          "CRANBOURNE",
+          "CRANBOURNE NORTH",
+          "CRANBOURNE WEST",
+          "DANDENONG",
+          "DANDENONG NORTH",
+          "DINGLEY VILLAGE",
+          "DOVETON",
+          "EDITHVALE",
+          "ENDEAVOUR HILLS",
+          "EUMEMMERRING",
+          "FRANKSTON",
+          "FRANKSTON SOUTH",
+          "HALLAM",
+          "HAMPTON PARK",
+          "HEATHERTON",
+          "KEYSBOROUGH",
+          "LYSTERFIELD",
+          "MENTONE",
+          "MORDIALLOC",
+          "MULGRAVE",
+          "NARRE WARREN",
+          "NOBLE PARK",
+          "OAKLEIGH SOUTH",
+          "PARKDALE",
+          "PATTERSON LAKES",
+          "ROWVILLE",
+          "SANDHURST",
+          "SEAFORD",
+          "SKYE",
+          "SPRINGVALE",
+          "SPRINGVALE SOUTH",
+          "WATERWAYS",
+          "WHEELERS HILL"
+        ]
+      }
+    },
+    {
+      "lookup": "properties.vic_loca_2",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/South-Eastern%20Metropolitan.csv"
+        },
+        "key": "Suburb",
+        "fields": [
+          "Price"
+        ]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape"
+  },
+  "encoding": {
+    "color": {
+      "field": "Price",
+      "type": "quantitative",
+      "scale": {
+        "type": "log"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.vic_loca_2",
+        "type": "nominal",
+        "title": "Suburb"
+      },
+      {
+        "field": "Price",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}
