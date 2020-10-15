@@ -218,7 +218,8 @@
             "color": {
               "field": "DevMean",
               "type": "quantitative",
-              "scale": {"domainMid": 0, "range": "diverging"}
+              "scale": {"domainMid": 0, "range": "diverging"},
+              "legend": {"title":"Dev. from the Mean Price"}
             },
             "tooltip": [
               {
