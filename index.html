@@ -6,14 +6,76 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+<head>
+<title>Homework 9</title>
+<style>
+body {
+  background-color: white;
+  text-align: left;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+}
+h1{
+  color:blue;
+  padding:20px;
+}
+.Map{
+  background:black;
+  color:white;
+  padding:20px;
+  display:flex;
+  flex-direction:row;
+}
+.Map div{
+  margin: auto;
+  width:100px;
+}
+.Map.Price div{
+  background:red;
+  font-size: 200%;
+}
+ .Map.DevPrice div{
+  background:pink;
+}
+footer{
+  background:black;
+  color:red;
+  padding:10px 20px;
+}
+</style> 
 </head>
 <body>
 
-<div id="vis"></div>
+<h1>Homework 9 Submission</h1>
+<p>This web contains two choropleth maps created as potential maps for Data vis2.</p>
+<p>All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
+
+<h2>Choropleth Map 1</h2>
+<p> This is a chorpleth map for the price per bedroom for each suburb.</p>
+
+
+<h2>Choropleth Map 2</h2>
+<p> This is a chorpleth map for deviation form the areal price per bedroom for each suburb.</p>
+
+<section class="Map Price">
+<div id="vis1" class="vis-container"></div> 
+<div>b</div>
+<div>c</div>
+</section>
+<section class="Map DevPrice">
+<div>a</div> 
+<div>b</div> 
 
 <script type="text/javascript">
-  var spec = "https://zshi0004.github.io/FIT3179/Assignment%20Json/Devation%20from%20Mean%20price%20map%20V1.0.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment%20Json/Devation%20from%20Mean%20price%20map%20V1.0.json";
+  var specMap2="";
+  vegaEmbed('#map1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  vegaEmbed('#map2', specVis2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
