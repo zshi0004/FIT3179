@@ -18,6 +18,9 @@ body {
   margin:auto;
   padding:0;
 }
+  p{
+  margin:1;
+  }
 h1{
   color:blue;
   padding:20px;
@@ -30,10 +33,10 @@ h1{
 .Map div{
   margin: auto;
 }
- .Map.DevPrice div{
-  background:pink;
-}
-  .Map2_section h2{
+  .Map_section{
+    margin:80px
+  }
+.Map_section h2{
     color:darkgray
   }
 </style> 
@@ -44,11 +47,8 @@ h1{
 <p>This web contains two choropleth maps created as potential maps for Data vis2.</p>
 <p>All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
 
-<h2>Choropleth Map 2</h2>
-<p> This is a chorpleth map for deviation form the areal price per bedroom for each suburb.</p>
-
 <section class="Map Price">
-<div class="Map2_section">
+<div class="Map_section">
   <h2>Choropleth Map 1</h2>
   <p> This is a chorpleth map for the price per bedroom for each suburb.</p>
 </div> 
@@ -57,7 +57,7 @@ h1{
     </div>
 </section>
 <section class="Map DevPrice">
-<div class="Map2_section">
+<div class="Map_section">
   <h2>Choropleth Map 2</h2>
   <p> This is a chorpleth map for deviation form the areal price per bedroom for each suburb.</p>
 </div> 
