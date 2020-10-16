@@ -29,7 +29,6 @@ h1{
 }
 .Map div{
   margin: auto;
-  width:100px;
 }
  .Map.DevPrice div{
   background:pink;
@@ -45,10 +44,6 @@ h1{
 <p>This web contains two choropleth maps created as potential maps for Data vis2.</p>
 <p>All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
 
-<h2>Choropleth Map 1</h2>
-<p> This is a chorpleth map for the price per bedroom for each suburb.</p>
-
-
 <h2>Choropleth Map 2</h2>
 <p> This is a chorpleth map for deviation form the areal price per bedroom for each suburb.</p>
 
@@ -57,16 +52,17 @@ h1{
   <h2>Choropleth Map 1</h2>
   <p> This is a chorpleth map for the price per bedroom for each suburb.</p>
 </div> 
-<div>b</div>
-<div>c</div>
+  <div>
+    <div id="vis1" class="vis-container">
+    </div>
 </section>
 <section class="Map DevPrice">
 <div>a</div> 
 <div>b</div> 
 
 <script type="text/javascript">
-  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment%20Json/Devation%20from%20Mean%20price%20map%20V1.0.json";
-  var specMap2="";
+  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/Price per bedroom V1.0.json";
+  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/Dev Price per bedroom.json";
   vegaEmbed('#map1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
