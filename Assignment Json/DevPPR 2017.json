@@ -1,0 +1,251 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Housing Market in South-Eastern Metropolitan of Melbourne (2017)",
+  "width": 500,
+  "height": 375,
+  "projection": {"type": "equirectangular"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/TopoJson%20vic.json",
+        "format": {"type": "topojson", "feature": "geoJason vic"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "properties.vic_loca_2",
+            "oneOf": [
+              "MOORABBIN",
+              "HIGHETT",
+              "CHELTENHAM",
+              "MENTONE",
+              "MOORABBIN AIRPORT",
+              "PARKDALE",
+              "MORDIALLOC",
+              "ASPENDALE",
+              "EDITHVALE",
+              "CHELSEA",
+              "BONBEACH",
+              "CARRUM",
+              "PATTERSON LAKES",
+              "CHELSEA HEIGHTS",
+              "ASPENDALE GARDENS",
+              "WATERWAYS",
+              "BRAESIDE",
+              "DINGLEY VILLAGE",
+              "HEATHERTON",
+              "CLAYTON SOUTH",
+              "CLARINDA",
+              "OAKLEIGH SOUTH",
+              "CASEY COAST",
+              "CLYDE",
+              "CLYDE NORTH",
+              "BERWICK",
+              "CASEY FOOTHILLS",
+              "HARKAWAY",
+              "NARRE WARREN NORTH",
+              "LYSTERFIELD SOUTH",
+              "ENDEAVOUR HILLS",
+              "DOVENTON",
+              "EUMEMMERING",
+              "HALLAM",
+              "NARRE WARREN",
+              "HAMPTON PARK",
+              "NARRE WARREN SOUTH",
+              "CRANBOURNE NORTH",
+              "LYNBROOK",
+              "LYNDHURST",
+              "CRANBOURNE WEST",
+              "CRANBOURNE",
+              "CRANBOURNE EAST",
+              "BOTANIC RIDGE",
+              "CRANBOURNE SOUTH",
+              "PEARCEDALE",
+              "DEVON MEADOWS",
+              "JUNCTION VILLAGE",
+              "FRANKSTON SOUTH",
+              "LANGWARRIN SOUTH",
+              "LANGWARRIN",
+              "SKYE",
+              "SANDHURST",
+              "CARRUM DOWNS",
+              "SEAFORD",
+              "FRANKSTON NORTH",
+              "FRANKSTON",
+              "HUGHESDALE",
+              "OAKLEIGH SOUTH",
+              "CLAYTON",
+              "MULGRAVE",
+              "WHEELERS HILL",
+              "GLEN WAVERLEY",
+              "MOUNT WAVERLEY",
+              "ASHWOOD",
+              "BURWOOD",
+              "CHADSTONE",
+              "OAKLEIGH",
+              "OAKLEIGH EAST",
+              "HUNTINGDALE",
+              "NOTTING HILL",
+              "SPRINGVALE",
+              "SPRINGVALE SOUTH",
+              "KEYSBOROUGH",
+              "BANGHOLME",
+              "DANDENONG SOUTH",
+              "GREAT DANDENONG",
+              "DANDENONG",
+              "DANDENONG NORTH",
+              "NOBLE PARK NORTH",
+              "NOBLE PARK",
+              "DOVETON",
+              "EUMEMMERRING"
+            ]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black"},
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.vic_loca_2",
+            "type": "nominal",
+            "title": "Suburb"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/TopoJson%20vic.json",
+        "format": {"type": "topojson", "feature": "geoJason vic"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "properties.vic_loca_2",
+            "oneOf": [
+              "MOORABBIN",
+              "HIGHETT",
+              "CHELTENHAM",
+              "MENTONE",
+              "MOORABBIN AIRPORT",
+              "PARKDALE",
+              "MORDIALLOC",
+              "ASPENDALE",
+              "EDITHVALE",
+              "CHELSEA",
+              "BONBEACH",
+              "CARRUM",
+              "PATTERSON LAKES",
+              "CHELSEA HEIGHTS",
+              "ASPENDALE GARDENS",
+              "WATERWAYS",
+              "BRAESIDE",
+              "DINGLEY VILLAGE",
+              "HEATHERTON",
+              "CLAYTON SOUTH",
+              "CLARINDA",
+              "OAKLEIGH SOUTH",
+              "CASEY COAST",
+              "CLYDE",
+              "CLYDE NORTH",
+              "BERWICK",
+              "CASEY FOOTHILLS",
+              "HARKAWAY",
+              "NARRE WARREN NORTH",
+              "LYSTERFIELD SOUTH",
+              "ENDEAVOUR HILLS",
+              "DOVENTON",
+              "EUMEMMERING",
+              "HALLAM",
+              "NARRE WARREN",
+              "HAMPTON PARK",
+              "NARRE WARREN SOUTH",
+              "CRANBOURNE NORTH",
+              "LYNBROOK",
+              "LYNDHURST",
+              "CRANBOURNE WEST",
+              "CRANBOURNE",
+              "CRANBOURNE EAST",
+              "BOTANIC RIDGE",
+              "CRANBOURNE SOUTH",
+              "PEARCEDALE",
+              "DEVON MEADOWS",
+              "JUNCTION VILLAGE",
+              "FRANKSTON SOUTH",
+              "LANGWARRIN SOUTH",
+              "LANGWARRIN",
+              "SKYE",
+              "SANDHURST",
+              "CARRUM DOWNS",
+              "SEAFORD",
+              "FRANKSTON NORTH",
+              "FRANKSTON",
+              "HUGHESDALE",
+              "OAKLEIGH SOUTH",
+              "CLAYTON",
+              "MULGRAVE",
+              "WHEELERS HILL",
+              "GLEN WAVERLEY",
+              "MOUNT WAVERLEY",
+              "ASHWOOD",
+              "BURWOOD",
+              "CHADSTONE",
+              "OAKLEIGH",
+              "OAKLEIGH EAST",
+              "HUNTINGDALE",
+              "NOTTING HILL",
+              "SPRINGVALE",
+              "SPRINGVALE SOUTH",
+              "KEYSBOROUGH",
+              "BANGHOLME",
+              "DANDENONG SOUTH",
+              "GREAT DANDENONG",
+              "DANDENONG",
+              "DANDENONG NORTH",
+              "NOBLE PARK NORTH",
+              "NOBLE PARK",
+              "DOVETON",
+              "EUMEMMERRING"
+            ]
+          }
+        },
+        {
+          "lookup": "properties.vic_loca_2",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/SE2017Summary.csv"
+            },
+            "key": "Suburb",
+            "fields": ["DevAreaPrice"]
+          }
+        }
+      ],
+      "layer": [
+        {
+          "mark": {"type": "geoshape", "stroke": "black"},
+          "encoding": {
+            "color": {
+              "field": "DevAreaPrice",
+              "type": "quantitative",
+              "scale": {"domainMid": 0, "scheme": "redblue"},
+              "legend": {"title": ["Dev. from Areal", "Price per Bedroom"]}
+            },
+            "tooltip": [
+              {
+                "field": "properties.vic_loca_2",
+                "type": "nominal",
+                "title": "Suburb"
+              },
+              {
+                "field": "DevAreaPrice",
+                "type": "quantitative",
+                "title": ["Deviation from Areal", "Price per Bedroom"]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
