@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Housing Market in South-Eastern Metropolitan of Melbourne (2017)",
+  "title": "Housing Market in South-Eastern Metropolitan of Melbourne (2018)",
   "width": 300,
   "height": 225,
   "projection": {"type": "equirectangular"},
