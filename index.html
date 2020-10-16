@@ -19,7 +19,8 @@ body {
   padding:0;
 }
   p{
-  margin:1;
+  margin-left:10px;
+    margin-bottom:1;
   }
 h1{
   color:blue;
@@ -44,36 +45,50 @@ h1{
 <body>
 
 <h1>Homework 9 Submission</h1>
-<p>   This web contains two choropleth maps created as potential maps for Data vis2.</p>
-<p>   All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
-<p>   This html page is still under construction. </p>
+<p>This web contains 2 choropleth maps each year (2017 and 2018) created as potential maps for Data vis2.</p>
+  <p> A choropleth map about the price per bedroom for each suburb .</p>
+  <p> A choropleth map about the deviation from areal price per bedroom for each suburb.</p>
+<p>All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
+<p>This html page is still under construction. </p>
 
 <section class="Map Price">
 <div class="Map_section">
-  <h2>Choropleth Map 1</h2>
-  <p> This is a chorpleth map for the price per bedroom for each suburb.</p>
+  <h2>Choropleth Map for 2017</h2>
 </div> 
   <div>
-    <div id="map1" class="vis-container">
+    <div id="map1">
+    </div>
+    <div>
+    <div id="map2">
     </div>
 </section>
 <section class="Map DevPrice">
 <div class="Map_section">
-  <h2>Choropleth Map 2</h2>
-  <p> This is a chorpleth map for deviation form the areal price per bedroom for each suburb.</p>
+  <h2>Choropleth Map for 2018</h2>
 </div> 
   <div>
-    <div id="map2">
+    <div id="map3">
+    </div>
+    <div>
+    <div id="map4">
     </div>
 </section>
 
 <script type="text/javascript">
-  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/Price per bedroom V1.0.json";
-  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/Dev Price per bedroom.json";
+  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/PPR 2017.json";
+  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/DevPPR 2017.json";
+  var specMap3 = "https://zshi0004.github.io/FIT3179/Assignment Json/PPR 2018.json";
+  var specMap4="https://zshi0004.github.io/FIT3179/Assignment Json/DevPPR 2018.json";
   vegaEmbed('#map1', specMap1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   vegaEmbed('#map2', specMap2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+   vegaEmbed('#map3', specMap3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  vegaEmbed('#map4', specMap4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
