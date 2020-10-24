@@ -1,0 +1,137 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/SEA1718.csv"
+  },
+  "width": 600,
+  "height": 450,
+  "params": [
+    {
+      "name": "Year_selector",
+      "bind": {
+        "input": "select",
+        "options": [null, "2017", "2018"],
+        "labels": ["Show All", "2017", "2018"],
+        "name": "Year Selection"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "Year_selector == null || datum.Year == Year_selector"}
+  ],
+  "layer": [
+    {
+      "selection": {
+        "City_highlight": {
+          "type": "multi",
+          "fields": ["City_Council"],
+          "bind": "legend"
+        }
+      },
+      "mark": {"type": "point", "filled": true, "stroke": "#2A2A2A"},
+      "encoding": {
+        "x": {
+          "field": "PPB_K",
+          "type": "quantitative",
+          "title": "Price per Bedroom in Thousands"
+        },
+        "y": {
+          "field": "Num_Property",
+          "type": "quantitative",
+          "title": "Number of Properties Sold in a Year"
+        },
+        "color": {
+          "field": "City_Council",
+          "type": "nominal",
+          "title": "City Council",
+          "scale": {
+            "domain": [
+              "Bayside City Council",
+              "Casey City Council",
+              "Frankston City Council",
+              "Greater Dandenong City Council",
+              "Kingston City Council",
+              "Monash City Council"
+            ],
+            "range": [
+              "#FD0303",
+              "#6ADAAA",
+              "#7a0177",
+              "#FF8300",
+              "#8AF90D",
+              "#08519c"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "City_highlight", "value": 0.6},
+          "value": 0.1
+        },
+        "shape": {"field": "Year", "type": "nominal"},
+        "size": {
+          "field": "Dev_PPB_K",
+          "type": "quantitative",
+          "scale": {"type": "threshold", "domain": [-150, 0, 50, 100, 150]},
+          "title": ["Deviation from the", "Areal Price per Bedroom"]
+        },
+        "tooltip": [
+          {"field": "Suburb", "type": "nominal"},
+          {"field": "Year", "type": "nominal"},
+          {
+            "field": "PPB_K",
+            "title": "Price per Bedroom in Thousans",
+            "type": "quantitative"
+          },
+          {
+            "field": "Dev_PPB_K",
+            "type": "quantitative",
+            "title": "Deviation from Areal Price per Bedroom"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {
+          "field": "PPB_K",
+          "type": "quantitative",
+          "title": "Price per Bedroom in Thousands"
+        },
+        "y": {
+          "field": "Num_Property",
+          "type": "quantitative",
+          "title": "Number of Properties Sold in a Year"
+        },
+        "text": {"field": "Suburb", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {"test": "datum['Suburb']=='CLAYTON'", "value": 1},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Suburb", "type": "nominal"},
+          {"field": "Year", "type": "nominal"},
+          {
+            "field": "PPB_K",
+            "title": "Price per Bedroom in Thousans",
+            "type": "quantitative"
+          },
+          {
+            "field": "Dev_PPB_K",
+            "type": "quantitative",
+            "title": "Deviation from Areal Price per Bedroom"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
