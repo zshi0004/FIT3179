@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   
 <head>
-<title>Homework 9</title>
+<title>Homework 10</title>
 <style>
 body {
   background-color: white;
@@ -55,27 +55,27 @@ h1{
 <section class="Map Price">
 <h2>Choropleth Map for 2017</h2>
   <div class="Map_section">
-    <div id="map1">
-    </div>
-    <div>
-    <div id="map2">
-    </div>
+    <span id="map1">
+    </span>
+    <span id="map2">
+    </span>
+  </div>
 </section>
 <section class="Map DevPrice">
  <h2>Choropleth Map for 2018</h2>
   <div class="Map_section">
-    <div id="map3">
-    </div>
-    <div>
-    <div id="map4">
-   </div>
+    <span id="map3">
+    </span>
+    <span id="map4">
+   </span>
+  </div>
 </section>
 
 <script type="text/javascript">
-  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/PPR 2017.json";
-  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/DevPPR 2017.json";
-  var specMap3 = "https://zshi0004.github.io/FIT3179/Assignment Json/PPR 2018.json";
-  var specMap4="https://zshi0004.github.io/FIT3179/Assignment Json/DevPPR 2018.json";
+  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/Map/PPB2017.json";
+  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2017.json";
+  var specMap3 = "https://zshi0004.github.io/FIT3179/Assignment Json/Map/PPB2018.json";
+  var specMap4="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2018.json";
   vegaEmbed('#map1', specMap1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
