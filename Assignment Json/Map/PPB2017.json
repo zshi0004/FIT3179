@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Price per Bedroom in Thousands in South-Eastern Metropolitan of Melbourne (2017)",
-  "width": 400,
-  "height": 300,
+  "width": 300,
+  "height": 225,
   "projection": {"type": "equirectangular"},
   "layer": [
     {
