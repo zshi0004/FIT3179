@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Deviation from Areal Price per Bedroom in Thousands in South-Eastern Metropolits (2018)",
+  "title": "Deviation from Areal Price per Bedroom in K (2018)",
   "width": 300,
   "height": 225,
   "projection": {"type": "equirectangular"},
@@ -229,10 +229,11 @@
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
-                "domain": [-100, 0, 100, 200, 300],
+                "domain": [-100, 0, 20,100,200, 300],
                 "range": [
                   "#ca0020",
                   "#f4a582",
+                  "#fddbc7",
                   "#d1e5f0",
                   "#92c5de",
                   "#4393c3",
@@ -240,11 +241,7 @@
                 ]
               },
               "legend": {
-                "title": [
-                  "Deviation from Areal",
-                  " Price per Bedroom",
-                  "in Thoudsands"
-                ],
+                "title": ["Deviation from","Areal PPB in K"],
                 "titleAlign": "center"
               }
             },
