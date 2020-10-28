@@ -27,10 +27,10 @@ It has be stated in the media recently that the housing market of Melbourne has 
 Study the data of property sales from 2017 to 2018 of the south-eastern metropolitan has found the number of property sold and the areal price per bedroom <b>decreased dramatically from 2017 to 2018</b>.
 </p>
 </div>
-<div id='T1'>
+<div id='vis1'>
 </div>
 </span>
-<span id='Bar1'>
+<span id='vis2'>
 </span>
 
 </section>
@@ -48,16 +48,19 @@ Study the data of property sales from 2017 to 2018 of the south-eastern metropol
 
 <p style="color:red;">A red paragraph.</p>
 
+
 <script type="text/javascript">
-  var specText = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/price text.json";
-  vegaEmbed('#T1', specText).then(function(result) {
+  var specVis1 = "./normalised-stacked-bars-responsive.json";
+  var specVis2= "./line-chart-responsive.json";  
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-var specBar = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/Bar3.json";
-  vegaEmbed('#Bar1', specText).then(function(result) {
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-</script>
+  </script>
+  
 
 </body>
 </html>
