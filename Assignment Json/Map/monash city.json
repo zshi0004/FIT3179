@@ -192,7 +192,8 @@
             "field": "properties.vic_loca_2",
             "oneOf": [
               "MULGRAVE",
-              "HUGHESDALE"
+              "HUGHESDALE",
+              "OAKLEIGH SOUTH"
             ]
           }
         }
