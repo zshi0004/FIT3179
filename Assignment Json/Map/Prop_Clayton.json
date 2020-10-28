@@ -4,6 +4,17 @@
   "width": 500,
   "height": 375,
   "projection": {"type": "equirectangular"},
+  "params": [
+    {
+      "name": "Year_selector",
+      "bind": {
+        "input": "select",
+        "options": [null, "2017", "2018"],
+        "labels": ["Show All", "2017", "2018"],
+        "name": "Year Selection"
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -23,12 +34,23 @@
       "data": {
         "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/Clayton.csv"
       },
+    
+  "transform": [
+    {"filter": "Year_selector == null || datum.Year == Year_selector"}
+  ],
       "encoding": {
         "longitude": {"field": "Longtitude", "type": "quantitative"},
         "latitude": {"field": "Lattitude", "type": "quantitative"}
       },
       "layer": [
         {
+      "selection": {
+        "City_highlight": {
+          "type": "multi",
+          "fields": ["Year"],
+          "bind": "legend"
+        }
+      },
           "mark": {"type": "circle", "filled": true, "stroke": "lightslategray"},
           "encoding": {
             "tooltip": [
@@ -53,7 +75,11 @@
             "color": {
               "field": "Year",
               "type": "nominal"
-            }
+            },
+            "opacity": {
+          "condition": {"selection": "City_highlight", "value": 0.6},
+          "value": 0.1
+        }
           }
         },
         {
@@ -85,5 +111,5 @@
       ]
     }
   ],
-  "config": {}
+  "config": {"view": {"stroke": "transparent"}}
 }
