@@ -154,6 +154,59 @@
           }
         ]
       }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/TopoJson%20vic.json",
+        "format": {"type": "topojson", "feature": "geoJason vic"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "properties.vic_loca_2",
+            "oneOf": [
+              "CLAYTON"
+            ]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "blue", "stroke": "darkred"},
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.vic_loca_2",
+            "type": "nominal",
+            "title": "Suburb"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/TopoJson%20vic.json",
+        "format": {"type": "topojson", "feature": "geoJason vic"}
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "properties.vic_loca_2",
+            "oneOf": [
+              "MULGRAVE",
+              "HUGHESDALE"
+            ]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "salmon", "stroke": "darkred"},
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.vic_loca_2",
+            "type": "nominal",
+            "title": "Suburb"
+          }
+        ]
+      }
     }
   ],
   "config": {"view": {"stroke": "transparent"}}
