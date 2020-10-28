@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/General.csv"
+  },
+  "mark": "text",
+  "encoding": {
+    "column": {"field": "Year", "type": "nominal", "title": null},
+    "text": {"field": "Mean_PPB_K", "type": "quantitative"},
+    "color": {"field": "Year", "legend": null},
+    "size": {
+      "field": "Mean_PPB_K",
+      "type": "quantitative",
+      "scale": {"type": "threshold", "domain": [299, 318]},
+      "legend": null
+    }
+  },
+  "config": {"view": {"stroke": "transparent"}}
+}

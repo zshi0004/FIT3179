@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/General2.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "row": {"field": "Year", "type": "nominal"},
+    "x": {
+      "aggregate": "sum",
+      "field": "Counts",
+      "title": "Number of Properties Sold"
+    },
+    "y": {"field": "Type", "axis": {"title": ""}},
+    "color": {
+      "field": "Type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["House", "Townhouse", "Unit"],
+        "range": ["#a6cee3", "#1f78b4", "#b2df8a"]
+      },
+      "legend": {"orient": "bottom", "titleOrient": "left"}
+    },
+    "tooltip": [
+      {"field": "Type", "type": "nominal"},
+      {
+        "field": "sum_Counts",
+        "type": "quantitative",
+        "title": "Number sold in the year"
+      }
+    ]
+  },
+  "config": {"view": {"stroke": "transparent"}, "axis": {"domainWidth": 1}}
+}
