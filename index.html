@@ -1,95 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-  <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  
-<head>
-<title>Homework 10</title>
 <style>
-body {
-  background-color: white;
-  text-align: left;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  margin:auto;
-  padding:0;
-}
-  p{
-  margin-left:10px;
-    margin-bottom:1;
-  }
-h1{
-  color:blue;
-  padding:20px;
-}
-.Map{
-  padding:20px;
-  display:flex;
-  flex-direction:row;
-}
-  .Map_section{
-    margin:80px
-  }
-.Map_section h2{
-    color:darkgray
-  }
-</style> 
+body {margin: 80px;font-family: Arial, Helvetica, sans-serif;padding:0;}
+p {color:#455A64;font-size:18px;text-align:justify;}
+h2 {color:#424242;font-size:30px;margin-bottom:0px;}
+</style>
 </head>
 <body>
 
-<h1>Homework 10 Submission</h1>
-<p>This web contains 2 choropleth maps each year (2017 and 2018) created as potential maps for Data vis2.</p>
-  <p> A choropleth map about the price per bedroom for each suburb .</p>
-  <p> A choropleth map about the deviation from areal price per bedroom for each suburb.</p>
-<p>All areas shaded in dark grey are where no housing market information is colleced in the original dataset.</p>
-<p>A bubble chart with interaction. User can filter the plot by cliking the city of coucile legend and the selecting the year of sales. </p>
-  
-<h2>Choropleth Map for 2017</h2>
-<section class="Map Price">
-    <span id="map1">
-    </span>
-    <span id="map2">
-    </span>
-</section>
-<h2>Choropleth Map for 2018</h2>
-<section class="Map DevPrice">
-    <span id="map3">
-    </span>
-    <span id="map4">
-    </span>
-</section>
-  
-<h2>Bubble chart for Price per Bedroom in thousands with the Number of Properties Sold in a Year<h2>
+<h1 style='font-size:55px;text-align: center;margin-bottom:0px;'>
+The Housing Market of The South-Eastern  Melbourne
+</h1>
+
+<div style=' max-width: 500px;min-width: 200px;margin-left: auto;margin-right: auto;'>
+<p style='text-align:center;'>
+It has be stated in the media recently that the housing market of Melbourne has finally started cooling off.<br><b style='font-size:20px'>However, is this the <i>REAL</i> case?</b></p>
+</p>
+</div>
+
+<h2> Background Information </h2>
 <section>
-    <span id="bubble">
-    </span>
+<span>
+<div style=' max-width: 500px;min-width: 200px;'>
+<p>
+Study the data of property sales from 2017 to 2018 of the south-eastern metropolitan has found the number of property sold and the areal price per bedroom <b>decreased dramatically from 2017 to 2018</b>.
+</p>
+</div>
+<div id='T1'>
+</div>
+</span>
+<span id='Bar1'>
+</span>
+
 </section>
 
+
+
+
+
+<p>My first paragraph.</p>
+<p>This is a <br> paragraph with a line break.</p>
+<p title="I'm a tooltip">This is a paragraph.</p>
+<br>
+
+<h1 style="color:blue;">A Blue Heading</h1>
+
+<p style="color:red;">A red paragraph.</p>
+
 <script type="text/javascript">
-  var specMap1 = "https://zshi0004.github.io/FIT3179/Assignment Json/Map/PPB2017.json";
-  var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2017.json";
-  var specMap3 = "https://zshi0004.github.io/FIT3179/Assignment Json/Map/PPB2018.json";
-  var specMap4="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2018.json";
-  var specBubble="https://zshi0004.github.io/FIT3179/Assignment Json/Other/price text.json";
-  vegaEmbed('#map1', specMap1).then(function(result) {
+  var specText = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/price text.json";
+  vegaEmbed('#T1', specText).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-  vegaEmbed('#map2', specMap2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-   vegaEmbed('#map3', specMap3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  vegaEmbed('#map4', specMap4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  vegaEmbed('#bubble', specBubble).then(function(result) {
+var specBar = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/Bar3.json";
+  vegaEmbed('#Bar1', specText).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
+
 </body>
 </html>
