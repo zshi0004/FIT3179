@@ -241,10 +241,7 @@
                 ]
               },
               "legend": {
-                "title": [
-                  "Deviation from Areal Price",
-                  "per Bedroom in K"
-                ],
+                "title": ["Deviation from","Areal PPB in K"],
                 "titleAlign": "center"
               }
             },
