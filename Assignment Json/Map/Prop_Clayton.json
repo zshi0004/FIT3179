@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Housing Market in Clayton",
+  "width": 500,
+  "height": 375,
+  "projection": {"type": "equirectangular"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/TopoJson_Vic.topojson",
+        "format": {"type": "topojson", "feature": "geoJason vic"}
+      },
+      "transform": [
+        {"filter": {"field": "properties.vic_loca_2", "oneOf": ["CLAYTON"]}}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "whitesmoke",
+        "stroke": "lightslategray"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/Clayton.csv"
+      },
+      "encoding": {
+        "longitude": {"field": "Longtitude", "type": "quantitative"},
+        "latitude": {"field": "Lattitude", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "circle", "filled": true, "stroke": "lightslategray"},
+          "encoding": {
+            "tooltip": [
+          {"field": "Year", "type": "nominal"},
+          {
+            "field": "PPB_K",
+            "title": "Price per Bedroom in Thousands",
+            "type": "quantitative"
+          },
+          {
+            "field": "DistMonash",
+            "type": "quantitative",
+            "title": "Minimum Walking Distance from Monash(km)"
+          }
+        ],
+            "size": {
+              "field": "PPB_K",
+              "type": "quantitative",
+               "scale": {"type": "threshold", "domain": [300,400,600]},
+              "title": ["Deviation from the", "Areal Price per Bedroom"]
+            },
+            "color": {
+              "field": "Year",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/monash.csv"
+          },
+          "encoding": {
+            "longitude": {"field": "Longtitude", "type": "quantitative"},
+            "latitude": {"field": "Lattitude", "type": "quantitative"}
+          },
+          "layer": [
+            {"mark": {"type": "circle", "color": "red", "size": 150}},
+            {
+              "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "bottom",
+                "dy": -8,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+              },
+              "encoding": {
+                "text": {"field": "Place", "type": "nominal"},
+                "color": {"value": "red"}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
