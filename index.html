@@ -48,7 +48,7 @@ Study the data of property sales from 2017 to 2018 of the south-eastern metropol
 
     <!-- Section 2 -->
     <section>
-        <div id='Bar1' style='padding-left:10px;'></div>
+        <div id='Bar1' style='padding-left:60px;'></div>
     </section>
 </section>
 <br>
@@ -57,7 +57,7 @@ Study the data of property sales from 2017 to 2018 of the south-eastern metropol
 <p>Let's compare the price per bedroom of each suburb <br>to that of the area.</p>
 <div class="row">
   <div class="column left2">
-    <p>It is found that more PPB of a suburb is greater than the areal PPB for the whole south-eastern Melbourne metropolitan. There are less dark reddish areas on the map of 2018.<br>Suburbs like <i>Clayton</i> and <i>Dandenong</i> have significantly increased their PPB in 2018.
+    <p>It is found that more PPB of a suburb is greater than the areal PPB for the whole south-eastern Melbourne metropolitan. There are less dark reddish areas on the map of 2018.<br>Suburbs like <i>Clayton</i> and <i>Dandenong</i> have significantly increased their PPB in 2018.<br>
 It can be inferred the cooling-off of the Melbourne housing market <b>may not be true for every suburb</b> in the south-eastern area.</p>
   </div>
   <div class="column middle" id='map1'>
@@ -68,21 +68,39 @@ It can be inferred the cooling-off of the Melbourne housing market <b>may not be
 
 
 <h2>Let's Have A More Closer Look At The Monash City Council...</h2>
-
+<p style=' max-width: 350px;min-width: 200px;'>Did you spot that the colour for most suburbs belonging to the Monash City council changed to a bluish colour?</p>
 <section class="indent-1">
     <section class="left">
         <div style=' max-width: 350px;min-width: 200px;'>
 <p>
-Did you spot that the colour for most suburbs belonging to the Monash City council changed to a bluish colour?<br>
-It's not possible to ignore the colour of <b>Clayton</b> which becomes the <b>darkest blue</b> on the map for 2018 from a salmon colour in 2017.
-Though the number of properties sold in a year has decreased for all suburbs in 2018, it can be found on the right bubble plot, the PPB for most suburbs has passed the areal PPB of 2018. 
+It's not possible to ignore the colour of <b>Clayton</b> which becomes the <b>darkest blue</b> on the map for 2018 from a salmon colour in 2017.<br>
+Though the number of properties sold in a year has decreased for all suburbs in 2018, it can be found on the right bubble plot, the PPB for most suburbs has passed the areal PPB of 2018.<br>
+The only three suburb with PPB lower than the areal PPB is <i>Hughesdale</i>, <i>Oakleigh South</i> and <i>Mulgrave</i>.
 </div>
         <div id='map3'></div>
     </section>
 
     <!-- Section 2 -->
     <section>
-        <div id='Bub' style='padding-left:150px;'></div>
+        <div id='Bub' style='padding-left:160px;'></div>
+    </section>
+</section>
+
+<h2> How's Clayton's Housing Market? </h2>
+<p style=' max-width: 350px;min-width: 200px;'>Clayton suburb is where Monash University locates. So, is there any relationship between the distance from Monash University and the price per bedroom for each property?</p>
+<section class="indent-1">
+    <section class="left">
+        <div style=' max-width: 350px;min-width: 200px;'>
+<p>
+From the map, nearly a half of the properties has their PPB greater than $320,000 which is the areal PPB for 2017. <br>
+The only two properties with record that are sold in 2018 have PPBs greater than $320,000 which is greater than $299,735 (areal PPB in 2018).<br>
+However, it is hard to distinguish any relationship between the distance from the university and the PPB of the property, as there are properties that are close to the university with a PPB less than $320,000.
+</div>
+    </section>
+
+    <!-- Section 2 -->
+    <section>
+        <div id='map4' style='padding-left:180px;'></div>
     </section>
 </section>
 <br>
@@ -91,23 +109,6 @@ Though the number of properties sold in a year has decreased for all suburbs in 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-<h1 style="color:blue;">A Blue Heading</h1>
-
-<p style="color:red;">A red paragraph.</p>
-
 <script type="text/javascript">
   var specText = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/price text.json";
 var specBar = "https://zshi0004.github.io/FIT3179/Assignment Json/Other/Bar3.json";
@@ -115,6 +116,7 @@ var specMap1="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2017
 var specMap2="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Dev_PPB2018.json";
 var specMap3="https://zshi0004.github.io/FIT3179/Assignment Json/Map/monash city.json";
 var specBubble="https://zshi0004.github.io/FIT3179/Assignment Json/Other/monash city bubble.json";
+var specMap4="https://zshi0004.github.io/FIT3179/Assignment Json/Map/Prop_Clayton.json";
   vegaEmbed('#T1', specText).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -133,7 +135,9 @@ vegaEmbed('#map3', specMap3).then(function(result) {
 vegaEmbed('#Bub', specBubble).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-
+vegaEmbed('#map4', specMap4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
 
 </script>
 
