@@ -69,7 +69,7 @@
             "size": {
               "field": "PPB_K",
               "type": "quantitative",
-               "scale": {"type": "threshold", "domain": [300,400,600]},
+               "scale": {"type": "threshold", "domain": [320,400,600]},
               "title": ["Deviation from the", "Areal PPB in K"]
             },
             "color": {
