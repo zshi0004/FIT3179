@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/General2.csv"
   },
   "mark": "bar",
-  "width":300,
-  "height":80,
+  "width":400,
+  "height":100,
   "encoding": {
     "row": {"field": "Year", "type": "nominal"},
     "x": {
