@@ -6,6 +6,7 @@
   },
   "mark": "bar",
   "width":300,
+  "height":80,
   "encoding": {
     "row": {"field": "Year", "type": "nominal"},
     "x": {
