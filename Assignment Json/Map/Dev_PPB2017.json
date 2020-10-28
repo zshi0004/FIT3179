@@ -229,10 +229,11 @@
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
-                "domain": [-100, 0, 100, 200, 300],
+                "domain": [-100, 0, 20,100,200, 300],
                 "range": [
                   "#ca0020",
                   "#f4a582",
+                  "#fddbc7",
                   "#d1e5f0",
                   "#92c5de",
                   "#4393c3",
