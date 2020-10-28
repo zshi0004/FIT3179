@@ -49,7 +49,7 @@
           "field": "Dev_PPB_K",
           "type": "quantitative",
           "scale": {"type": "threshold", "domain": [0, 100, 200]},
-          "title": ["Deviation from the", "Areal Price per Bedroom"]
+          "title": ["Deviation from the", "Areal PPB in K"]
         },
         "tooltip": [
           {"field": "Suburb", "type": "nominal"},
