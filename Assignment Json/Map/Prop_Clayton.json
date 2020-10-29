@@ -70,7 +70,7 @@
               "field": "PPB_K",
               "type": "quantitative",
                "scale": {"type": "threshold", "domain": [320,400,600]},
-              "title":  "Areal PPB in K"
+              "title":  "PPB in K"
             },
             "color": {
               "field": "Year",
