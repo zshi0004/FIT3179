@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/zshi0004/FIT3179/main/Assignment%20Data/General2.csv"
   },
   "mark": "bar",
-  "width":400,
-  "height":100,
+  "width": 400,
+  "height": 100,
   "encoding": {
     "row": {"field": "Year", "type": "nominal"},
     "x": {
@@ -20,9 +20,9 @@
       "type": "nominal",
       "scale": {
         "domain": ["House", "Townhouse", "Unit"],
-        "range": ["#a6cee3", "#1f78b4", "#b2df8a"]
+        "range": ["#a6cee3", "#1f78b4", "#fdbf6f"]
       },
-      "legend": {"orient": "bottom", "titleOrient": "left"}
+      "legend": {"orient": "right", "titleOrient": "top"}
     },
     "tooltip": [
       {"field": "Type", "type": "nominal"},
