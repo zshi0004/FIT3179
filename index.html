@@ -8,13 +8,20 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <!-- Import pure.css -->
 <style>
-body {margin: 80px;font-family: Arial, Helvetica, sans-serif;padding:0;}
-p {color:#455A64;font-size:16px;text-align:justify;}
-h2 {color:#212F3C;font-size:30px;margin-bottom:0px;}
-b {color:#212F3C;}
-i {color:#283747;}
+body {font-family: Arial, Helvetica, sans-serif;background-color:#8396A3;}
+.page{width: 1100px;    
+       background-color: white;   
+       margin: auto;
+       padding: 50px;
+       padding-top: 35px;}
+p {color:#51626E;font-size:14px;text-align:justify;}
+h2 {color:white;font-size:25px;margin-bottom:20px;background-color:#475660}
+h5 {color:}
+b {color:#475660;}
+
+
 section.left{float:left;}
-.column {float: left;padding: 10px;}
+.column {float: left;}
 
 .left2 {width: 30%;}
 
@@ -27,14 +34,14 @@ section.left{float:left;}
 </style>
 </head>
 <body>
-
-<h1 style='font-size:55px;text-align: center;margin-bottom:0px;'>
+<section class='page'>
+<h1 style='font-size:42px;text-align: center;margin-bottom:0px;color:#2E383D'>
 The Housing Market of The South-Eastern  Melbourne
 </h1>
 
 <div style=' max-width: 500px;min-width: 200px;margin-left: auto;margin-right: auto;'>
 <p style='text-align:center;'>
-It has be stated in the media recently that the housing market of Melbourne has finally started cooling off.<br><b style='font-size:20px'>However, is this the <i>REAL</i> case?</b></p>
+It has be stated in the media recently that the housing market of Melbourne has finally started cooling off.<br><H3 style='font-size:20px;text-align:center;color:#475660';>However, is this the REAL case?</h3></p>
 </p>
 </div>
 
@@ -44,9 +51,14 @@ It has be stated in the media recently that the housing market of Melbourne has 
     <section class="left">
         <div style=' max-width: 350px;min-width: 200px;'>
 <p>
-Study the data of property sales from 2017 to 2018 of the south-eastern metropolitan has found the number of property sold and the areal price per bedroom (PPB) <b>decreased dramatically</b> from 2017 to 2018. <br>Areal PPB has decreased by almost 20,000 dollar.
+Study the data of property sales from 2017 to 2018 of the south-eastern metropolitan has found the number of property sold and the areal <b>price per bedroom (PPB) decreased dramatically</b> from 2017 to 2018. <br>Areal PPB has decreased by almost 20,000 dollar.
+<br></p>
+<h5>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAreal Price per Bedroom in Thousands</h5>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2017&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2018</p>
 </div>
-        <div id='T1'></div>
+        <div>
+<img src="https://raw.githubusercontent.com/zshi0004/FIT3179/main/PPB2.png" alt="PPB" width="320">
+</div>
     </section>
 
     <!-- Section 2 -->
@@ -57,21 +69,21 @@ Study the data of property sales from 2017 to 2018 of the south-eastern metropol
 <br>
 
 <h2>Is this <em>TRUE</em> for each suburb?</h2>
-<p>Let's compare the price per bedroom of each suburb <br>to that of the area.</p>
+<h5>Let's compare the price per bedroom of each suburb <br>to that of the area.</h5>
 <div class="row">
   <div class="column left2">
-    <p>It is found that more PPB of a suburb is greater than the areal PPB for the whole south-eastern Melbourne metropolitan. There are less dark reddish areas on the map of 2018.<br>Suburbs like <i>Clayton</i> and <i>Dandenong</i> have significantly increased their PPB in 2018.<br>
+    <p>It is found that more PPB of a suburb is greater than the areal PPB for the whole south-eastern Melbourne metropolitan. There are less dark reddish areas on the map of 2018.<br>Suburbs like <b>Clayton and Dandenong</b> have significantly <b>increased their PPB in 2018</b>.<br>
 It can be inferred the cooling-off of the Melbourne housing market <b>may not be true for every suburb</b> in the south-eastern area.</p>
   </div>
-  <div class="column middle" id='map1'>
+  <div class="column middle" id='map1' style:'width=-100%'>
   </div>
-  <div class="column right" id='map2'>
+  <div class="column right" id='map2' style:'width=-100%'>
   </div>
 </div>
 
 
 <h2>Let's Have A More Closer Look At The Monash City Council...</h2>
-<p style=' max-width: 350px;min-width: 200px;'>Did you spot that the colour for most suburbs belonging to the Monash City council changed to a bluish colour?</p>
+<h5 style=' max-width: 350px;min-width: 200px;text-align:justify;'>Did you spot that the colour for most suburbs belonging to the Monash City council changed to a bluish colour?</h5>
 <section class="indent-1">
     <section class="left">
         <div style=' max-width: 350px;min-width: 200px;'>
@@ -85,12 +97,12 @@ The only three suburb with PPB lower than the areal PPB is <i>Hughesdale</i>, <i
 
     <!-- Section 2 -->
     <section>
-        <div id='Bub' style='padding-left:160px;'></div>
+        <div id='Bub' style='padding-left:150px;'></div>
     </section>
 </section>
-
+<br><br>
 <h2> How's Clayton's Housing Market? </h2>
-<p style=' max-width: 350px;min-width: 200px;'>Is there any relationship between the distance from Monash University and the PPB for each property?</p>
+<h5 style=' max-width: 350px;min-width: 200px;text-align:justify;'>Is there any relationship between the distance from Monash University and the PPB for each property?</h5>
 <section class="indent-1">
     <section class="left">
         <div style=' max-width: 350px;min-width: 200px;'>
@@ -107,7 +119,7 @@ However, it is <i>hard to distinguish any relationship</i> between the distance 
         <div id='map4' style='padding-left:180px;'></div>
     </section>
 </section>
-<br>
+</section>
 
 
 
