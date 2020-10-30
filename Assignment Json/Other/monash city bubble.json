@@ -81,7 +81,8 @@
         "x": {
           "field": "PPB_K",
           "type": "quantitative",
-          "title": "Price per Bedroom in Thousands"
+          "title": "Price per Bedroom in Thousands",
+          "scale":{"domainMin":200}
         },
         "y": {
           "field": "Num_Property",
